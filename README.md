@@ -9,5 +9,4 @@
 
 #pip2 install youtube-dl
 
-#python2 youdown
-
+#python2 youdown.py
