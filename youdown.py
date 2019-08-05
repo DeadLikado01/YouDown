@@ -41,7 +41,7 @@ try:
         print("Good Bye")
         exit()
     if s == 'R' or s == 'r':
-        system('python2 you')
+        system('python2 youdown.py')
     print "Buscar Videos Y/N"
     y = raw_input("Yes Or Not Y/N :")
     if y == 'Y' or y == 'y':
