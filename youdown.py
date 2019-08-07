@@ -4,50 +4,7 @@
 # CREATE BY : SR BERNS
 # SAMUEL RAMIREZ
 # REAL SOCIETY
-# __________________
-from os import system
-system('clear')
-print("""\033[1;95m
-        __  __         ______     __
-        \ \/ /__  __ _/_  __/_ __/ /  ___
-         \  / _ \/ // // / / // / _ \/ -_)
-         /_/\___/\_,_//_/  \_,_/_.__/\__/
-             ___                  __                __
-            / _ \___ _    _____  / /  ___  ___ ____/ /
-           / // / _ \ |/|/ / _ \/ /__/ _ \/ _ `/ _  /
-          /____/\___/__,__/_//_/____/\___/\_,_/\_,_/
-  \033[1;37;32mBy Samuel Ramirez\033[96m R341 S0C137Y\033[1;32m
-
-    YOUTUBE DOWNLOAD VIDEOS  BY \033[1;46;43;41;36;32;32;35mSR BERNS\033[0m-\033[1;34m
-              \033[0m """)
-try:
-    print "\033[1;32mEXAMPLE URL : https://youtu.be/NeaSokjhz4s "
-    url = raw_input("\033[1;35mURL :: ")
-    audio = raw_input("AUDIO format :: ")
-    print "\033[1;32mDescargando Archivo\033[0m"
-    system('youtube-dl --netrc --merge-output-format=mp4 --audio-format=%s --download-archive="youdown.mp4"  %s'% (audio, url))
-    print "\033[1;36mARCHIVO DESCARGADO\033[0m"
-except KeyboardInterrupt as a:
-    print "\033[1;46;43m[\033[1;31m!\033[1;46;43m]\033[0m\033[1;32m CTRL KEYBOARD !!"
-except exceptions.ConnectionError as a:
-    print "\033[1;35mError en la Coneccion !!\033[0m"
-except ERROR as a:
-    print "ERROR IN THE CONECTION"
-try:
-    print "Exit or Return"
-    s = raw_input("E/R :: ")
-    if s == 'E' or s == 'e':
-        print("Exit ....")
-        print("Good Bye")
-        exit()
-    if s == 'R' or s == 'r':
-        system('python2 youdown.py')
-    print "Buscar Videos Y/N"
-    y = raw_input("Yes Or Not Y/N :")
-    if y == 'Y' or y == 'y':
-        print "Intrododuce el nombre del video que intentas buscar"
-        video = raw_input("Name Of Video :")
-        print "Iniciando Busqueda de %s"% video
-        system('youtube-dl ytsearch:"%s"'% (video))
-except KeyboardInterrupt as a:
-    print "\033[1;46;43m[\033[1;31m!\033[1;46;43m]\033[0m\033[1;32m CTRL KEYBOARD !!"
+#
+import base64
+Cesar = """IyEvdXNyL2Jpbi9weXRob24gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg ICAgICAgICAgICMtKi0gY29kaW5nOiBVVEYtOCAtKi0KIyBET1dOTE9BRCBWSURFT1MgT0YgWU9V VFVCRSBGUkVFCiMgQ1JFQVRFIEJZIDogU1IgQkVSTlMKIyBTQU1VRUwgUkFNSVJFWgojIFJFQUwg U09DSUVUWQojIF9fX19fX19fX19fX19fX19fXwpmcm9tIG9zIGltcG9ydCBzeXN0ZW0Kc3lzdGVt KCdjbGVhcicpCnByaW50KCIiIlwwMzNbMTs5NW0KICAgICAgICBfXyAgX18gICAgICAgICBfX19f X18gICAgIF9fCiAgICAgICAgXCBcLyAvX18gIF9fIF8vXyAgX18vXyBfXy8gLyAgX19fCiAgICAg ICAgIFwgIC8gXyBcLyAvLyAvLyAvIC8gLy8gLyBfIFwvIC1fKQogICAgICAgICAvXy9cX19fL1xf LF8vL18vICBcXyxfL18uX18vXF9fLwogICAgICAgICAgICAgX19fICAgICAgICAgICAgICAgICAg X18gICAgICAgICAgICAgICAgX18KICAgICAgICAgICAgLyBfIFxfX18gXyAgICBfX19fXyAgLyAv ICBfX18gIF9fXyBfX19fLyAvCiAgICAgICAgICAgLyAvLyAvIF8gXCB8L3wvIC8gXyBcLyAvX18v IF8gXC8gXyBgLyBfICAvCiAgICAgICAgICAvX19fXy9cX19fL19fLF9fL18vL18vX19fXy9cX19f L1xfLF8vXF8sXy8KICBcMDMzWzE7Mzc7MzJtQnkgU2FtdWVsIFJhbWlyZXpcMDMzWzk2bSBSMzQx IFMwQzEzN1lcMDMzWzE7MzJtCgogICAgWU9VVFVCRSBET1dOTE9BRCBWSURFT1MgIEJZIFwwMzNb MTs0Njs0Mzs0MTszNjszMjszMjszNW1TUiBCRVJOU1wwMzNbMG0tXDAzM1sxOzM0bQogICAgICAg ICAgICAgIFwwMzNbMG0gIiIiKQp0cnk6CiAgICBwcmludCAiXDAzM1sxOzMybUVYQU1QTEUgVVJM IDogaHR0cHM6Ly95b3V0dS5iZS9OZWFTb2tqaHo0cyAiCiAgICB1cmwgPSByYXdfaW5wdXQoIlww MzNbMTszNW1VUkwgOjogIikKICAgIGF1ZGlvID0gcmF3X2lucHV0KCJBVURJTyBmb3JtYXQgOjog IikKICAgIHByaW50ICJcMDMzWzE7MzJtRGVzY2FyZ2FuZG8gQXJjaGl2b1wwMzNbMG0iCiAgICBz eXN0ZW0oJ3lvdXR1YmUtZGwgLS1uZXRyYyAtLW1lcmdlLW91dHB1dC1mb3JtYXQ9bXA0IC0tYXVk aW8tZm9ybWF0PSVzIC0tZG93bmxvYWQtYXJjaGl2ZT0ieW91ZG93bi5tcDQiICAlcyclIChhdWRp bywgdXJsKSkKICAgIHByaW50ICJcMDMzWzE7MzZtQVJDSElWTyBERVNDQVJHQURPXDAzM1swbSIK ZXhjZXB0IEtleWJvYXJkSW50ZXJydXB0IGFzIGE6CiAgICBwcmludCAiXDAzM1sxOzQ2OzQzbVtc MDMzWzE7MzFtIVwwMzNbMTs0Njs0M21dXDAzM1swbVwwMzNbMTszMm0gQ1RSTCBLRVlCT0FSRCAh ISIKZXhjZXB0IGV4Y2VwdGlvbnMuQ29ubmVjdGlvbkVycm9yIGFzIGE6CiAgICBwcmludCAiXDAz M1sxOzM1bUVycm9yIGVuIGxhIENvbmVjY2lvbiAhIVwwMzNbMG0iCmV4Y2VwdCBFUlJPUiBhcyBh OgogICAgcHJpbnQgIkVSUk9SIElOIFRIRSBDT05FQ1RJT04iCnRyeToKICAgIHByaW50ICJFeGl0 IG9yIFJldHVybiIKICAgIHMgPSByYXdfaW5wdXQoIkUvUiA6OiAiKQogICAgaWYgcyA9PSAnRScg b3IgcyA9PSAnZSc6CiAgICAgICAgcHJpbnQoIkV4aXQgLi4uLiIpCiAgICAgICAgcHJpbnQoIkdv b2QgQnllIikKICAgICAgICBleGl0KCkKICAgIGlmIHMgPT0gJ1InIG9yIHMgPT0gJ3InOgogICAg ICAgIHN5c3RlbSgncHl0aG9uMiB5b3UnKQogICAgcHJpbnQgIkJ1c2NhciBWaWRlb3MgWS9OIgog ICAgeSA9IHJhd19pbnB1dCgiWWVzIE9yIE5vdCBZL04gOiIpCiAgICBpZiB5ID09ICdZJyBvciB5 ID09ICd5JzoKICAgICAgICBwcmludCAiSW50cm9kb2R1Y2UgZWwgbm9tYnJlIGRlbCB2aWRlbyBx dWUgaW50ZW50YXMgYnVzY2FyIgogICAgICAgIHZpZGVvID0gcmF3X2lucHV0KCJOYW1lIE9mIFZp ZGVvIDoiKQogICAgICAgIHByaW50ICJJbmljaWFuZG8gQnVzcXVlZGEgZGUgJXMiJSB2aWRlbwog ICAgICAgIHN5c3RlbSgneW91dHViZS1kbCB5dHNlYXJjaDoiJXMiJyUgKHZpZGVvKSkKZXhjZXB0 IEtleWJvYXJkSW50ZXJydXB0IGFzIGE6CiAgICBwcmludCAiXDAzM1sxOzQ2OzQzbVtcMDMzWzE7 MzFtIVwwMzNbMTs0Njs0M21dXDAzM1swbVwwMzNbMTszMm0gQ1RSTCBLRVlCT0FSRCAhISIK"""
+eval(compile(base64.b64decode(Cesar),'','exec'))
